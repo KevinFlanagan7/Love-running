@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-/* General styles*/
+/* General styles */
 body {
     min-height: 100vh;
     display: flex;
@@ -29,7 +29,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-
 }
 
 header a {
@@ -50,9 +49,8 @@ h1 {
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
-
 }
 
 .active {
@@ -69,7 +67,6 @@ nav {
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
     top: 100%;
-
 }
 
 /* Nav toggle */
@@ -81,16 +78,23 @@ nav {
     display: none;
 }
 
-#nav-toggle-label {
+.nav-toggle-label {
     font-size: 2rem;
 }
 
 /* Main content */
 main {
-    background-color: lightblue;
-    /* Make main element take up any surplus space to push header down"*/
+    
+    /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
+}
+
+/* Hero section */
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
 }
 
 /* Footer */
@@ -108,49 +112,46 @@ main {
     color: #3a3a3a;
 }
 
-/* Media query: tablets and larger (768 and up) */
+/* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
     /* Header */
     nav {
         display: block;
         position: relative;
-        box-shadow:none;
+        box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
-
     }
 
-        #menu {
-            display: flex;
-        }
-    
-        #menu>li {
-            padding-left: 1rem;
-        }
-    
-        .nav-toggle-label {
-            display: none;
-        }
+    #menu {
+        display: flex;
+    }
 
-        #logo {
-            font-size: 280%;
-            line-height: 75px;
-            margin: 0 0.5rem;
-        }
+    #menu>li {
+        padding-left: 1rem;
+    }
 
-        /* Main content */
-        main {
-            /* Push main content down to accomadate larger header */
-            margin-top: 79px;
-        }
+    .nav-toggle-label {
+        display: none;
+    }
 
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
+    }
 }
 
-/* Media query: Laptop and larger with mouse (992px and up) */
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
-        
-
     }
 }
